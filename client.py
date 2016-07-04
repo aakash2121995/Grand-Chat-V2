@@ -36,7 +36,7 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
             except :
                 pass
     def end(self):
-        self.socket.sendto("** " + self.name + " joined **",self.server)
+        self.socket.sendto("** " + self.name + " left **",self.server)
         self.shutdown = True
         self.rT.join()
         self.socket.close()
